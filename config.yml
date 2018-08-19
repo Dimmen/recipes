@@ -5,7 +5,7 @@ logging:
 
 template: Hello, %s!
 defaultName: Stranger
-
+    
 server:
   applicationConnectors:
     - type: http

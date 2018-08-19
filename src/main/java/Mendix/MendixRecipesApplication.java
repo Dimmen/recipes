@@ -1,6 +1,7 @@
 package Mendix;
 
 import Mendix.resources.HelloWorldResource;
+import Mendix.resources.RecipesResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -30,6 +31,9 @@ public class MendixRecipesApplication extends Application<MendixRecipesConfigura
                 configuration.getDefaultName()
             );
             environment.jersey().register(resource);
+        final RecipesResource resource2 = new RecipesResource();
+        environment.jersey().register(resource2);
+        
     	
         // TODO: implement application
     }
