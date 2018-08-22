@@ -1,10 +1,6 @@
 package Mendix.api;
 
-import Mendix.api.*;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.validator.constraints.Length;
-
+import Mendix.db.RecipeId;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -14,14 +10,13 @@ public class Recipe {
     @NotNull
     @Valid
     private Head head;
+    
     @NotNull
     private Ingredients ingredients;
+    
     @NotNull
     private Directions directions;
 
-    /**
-     * For Serialization.
-     */
     public Recipe(){
 
     }
@@ -55,6 +50,8 @@ public class Recipe {
         this.directions = directions;
     }
     
-  
+    public RecipeId generateRecipeId(){
+        return new RecipeId(head.getTitle());
+    }
 
 }
