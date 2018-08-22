@@ -1,6 +1,6 @@
 package Mendix;
 
-import Mendix.resources.HelloWorldResource;
+import Mendix.resources.RecipesResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -18,20 +18,14 @@ public class MendixRecipesApplication extends Application<MendixRecipesConfigura
 
     @Override
     public void initialize(final Bootstrap<MendixRecipesConfiguration> bootstrap) {
-        // TODO: application initialization
     }
 
     @Override
     public void run(final MendixRecipesConfiguration configuration,
                     final Environment environment) {
-    	
-        final HelloWorldResource resource = new HelloWorldResource(
-                configuration.getTemplate(),
-                configuration.getDefaultName()
-            );
-            environment.jersey().register(resource);
-    	
-        // TODO: implement application
+        final RecipesResource resource = new RecipesResource();
+        environment.jersey().register(resource);
     }
 
 }
+

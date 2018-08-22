@@ -1,0 +1,7 @@
+### Eclipse
+*.project
+
+### Maven
+target/
+dependency-reduced-pom.xml
+target/*

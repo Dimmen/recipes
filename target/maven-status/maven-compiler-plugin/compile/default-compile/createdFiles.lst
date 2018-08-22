@@ -1,4 +1,15 @@
-Mendix\api\Saying.class
-Mendix\MendixRecipesConfiguration.class
+Mendix\api\Directions.class
+Mendix\api\Head.class
+Mendix\api\RecipesWrapper.class
 Mendix\resources\HelloWorldResource.class
+Mendix\api\Ing.class
+Mendix\api\Amt.class
+Mendix\api\Categories.class
+Mendix\api\CategoriesWrapper.class
+Mendix\api\Ingredients.class
+Mendix\api\Recipe.class
+Mendix\api\Saying.class
+Mendix\resources\RecipesResource.class
+Mendix\api\RecipeIdentifier.class
+Mendix\MendixRecipesConfiguration.class
 Mendix\MendixRecipesApplication.class
