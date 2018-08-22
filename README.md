@@ -15,15 +15,21 @@ Usage
 
 All endpoints accept application/json. Below is an overview of all the api's. All the Http status code's are according to the industry standards.
 
-API:
-    GET     /recipes 			--> Get all recipes						--> http://localhost:8080/recipes
-    GET     /recipes/category 	--> Get all categories					--> http://localhost:8080/recipes/category
-    GET     /recipes/filter 	--> Filters the recipes on category 	--> http://localhost:8080/recipes/filter?filter=Italian
-    GET     /recipes/id 		--> Get 1 recipe based on id(title)		--> http://localhost:8080/recipes/id?id=Pizza
-    GET     /recipes/search 	--> Search on category or name			--> http://localhost:8080/recipes/search?search=Piz
-	POST    /recipes  			--> Adds a new recipe to the memory		--> http://localhost:8080/recipes
+
+
+| Command | Path | Example | Description |
+| --- | --- | --- | --- |
+| GET | /recipes | Get all recipes | http://localhost:8080/recipes |
+| GET | /recipes/category | Get all categories | http://localhost:8080/recipes/category |
+| GET | /recipes/filter | Filters the recipes on category | http://localhost:8080/recipes/filter?filter=Italian |
+| GET |  /recipes/id  | Get 1 recipe based on id(title) | http://localhost:8080/recipes/id?id=Pizza |
+| GET | /recipes/search | Search on category or name | http://localhost:8080/recipes/search?search=Piz |
+| POST |  /recipes | Adds a new recipe to the memory | http://localhost:8080/recipes |
+
+Example JSON format for posting:
+
 	
-	Example JSON format for posting:
+
 	{
       "head": {
         "title": "taart",
@@ -97,4 +103,4 @@ API:
 Health Check
 ---
 
-To see your applications health enter url `http://localhost:8081/healthcheck`
+Additional Dropwizard provides with healtchecks. To see your applications health enter url `http://localhost:8081/healthcheck`
