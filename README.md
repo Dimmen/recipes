@@ -15,6 +15,11 @@ Usage
 
 All endpoints accept application/json. Below is an overview of all the api's. All the Http status code's are according to the industry standards.
 
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
 API:
 | Command | Path | Example | Description |
 | --- | --- | --- | --- |
