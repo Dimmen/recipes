@@ -2,8 +2,7 @@ logging:
   level: INFO
   loggers:
     Mendix: DEBUG
-
-   
+  
 server:
   applicationConnectors:
     - type: http

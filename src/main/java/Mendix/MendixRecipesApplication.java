@@ -11,10 +11,6 @@ public class MendixRecipesApplication extends Application<MendixRecipesConfigura
         new MendixRecipesApplication().run(args);
     }
 
-    @Override
-    public String getName() {
-        return "MendixRecipes";
-    }
 
     @Override
     public void initialize(final Bootstrap<MendixRecipesConfiguration> bootstrap) {
