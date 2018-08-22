@@ -20,7 +20,8 @@ All endpoints accept application/json. Below is an overview of all the api's. Al
 | git status | List all new or modified files |
 | git diff | Show file differences that haven't been staged |
 
-API:
+
+
 | Command | Path | Example | Description |
 | --- | --- | --- | --- |
 | GET | /recipes | Get all recipes | http://localhost:8080/recipes |
