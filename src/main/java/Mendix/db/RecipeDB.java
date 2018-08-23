@@ -15,7 +15,7 @@ public class RecipeDB  {
    
     /*
      * 
-     * Get all recipes without any parameters (e.g. like category)
+     * Get all recipes without any parameters 
      */
     public List<Recipe> getAllRecipe() throws WebApplicationException {
         List<Recipe> recipeList = new ArrayList<>(recipesMemDB.values());
@@ -43,15 +43,20 @@ public class RecipeDB  {
     /*
      * For post request..
      * 
-     * (non-Javadoc)
-     * @see Mendix.db.Repo#addRecipe(Mendix.api.Recipe)
      */
     public void addRecipe(Recipe recipe) throws WebApplicationException {  
-        if (isRecipeAlreadyExists(recipe))
+        if (isRecipeAlreadyExists(recipe)) {
         	throw new WebApplicationException(Response.Status.CONFLICT);
+        } else {
         recipesMemDB.put(recipe.generateRecipeId(),recipe);
         categoriesList.addAll(recipe.getHead().getCategories().getCat());
+        }
     }
+    
+    /*
+     * 
+     * Filter recipes on category
+     */
 
     public List<Recipe> getRecipesFilter(String filterName) throws WebApplicationException {  
     	if (!ifFilterExists(filterName)){
@@ -86,6 +91,11 @@ public class RecipeDB  {
 		List<Recipe> recipeList = new ArrayList<>(recipeListTemp.values());
 		return recipeList;
     }
+    
+    /*
+     * 
+     * Search in both title and/or category
+     */
     
     public List<Recipe> getRecipesSearch(String search) throws WebApplicationException {  
 		Map<RecipeId, Recipe> recipeListTemp = new HashMap<RecipeId, Recipe>();
